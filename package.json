@@ -1,0 +1,26 @@
+{
+	"name": "test-practice-jest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"watch": "jest --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cc0803/test-practice-jest.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cc0803/test-practice-jest/issues"
+	},
+	"homepage": "https://github.com/cc0803/test-practice-jest#readme",
+	"devDependencies": {
+		"@babel/core": "^7.24.4",
+		"@babel/preset-env": "^7.24.4",
+		"babel-jest": "^29.7.0",
+		"jest": "^29.7.0"
+	}
+}
