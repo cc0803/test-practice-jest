@@ -1,4 +1,5 @@
-import capitalize from "./index.js";
+import { capitalize } from "./index.js";
+import { reverse } from "./index.js";
 
 test("Capitalize first letter in string 1", () => {
 	expect(capitalize("my")).toBe("My");
@@ -12,4 +13,10 @@ test("Capitalize all words in string", () => {
 	expect(capitalize("and what he saw was good")).toBe(
 		"And What He Saw Was Good"
 	);
+});
+
+// test reverse function
+
+test("Reverse word", () => {
+	expect(reverse("Cheesecake")).toBe("ekaceseehC");
 });
