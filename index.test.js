@@ -7,3 +7,9 @@ test("Capitalize first letter in string 1", () => {
 test("Capitalize first letter in string 2", () => {
 	expect(capitalize("dog")).toBe("Dog");
 });
+
+test("Capitalize all words in string", () => {
+	expect(capitalize("and what he saw was good")).toBe(
+		"And What He Saw Was Good"
+	);
+});
