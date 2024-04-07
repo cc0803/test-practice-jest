@@ -55,3 +55,23 @@ test("subtract decimals", () => {
 test("subtract negativ numbers", () => {
 	expect(calculator().subtract(3, -2)).toBe(5);
 });
+
+// divide function
+
+test("divide 1", () => {
+	expect(calculator().divide(12, 6)).toBe(2);
+});
+
+test("divide negativ and positiv", () => {
+	expect(calculator().divide(24, -4)).toBe(-6);
+});
+
+test("divide by zero", () => {
+	expect(calculator().divide(2, 0)).toBe(
+		"Mathematical Error division by zero"
+	);
+});
+
+test("dividing zero", () => {
+	expect(calculator().divide(0, 2)).toBe(0);
+});

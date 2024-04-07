@@ -15,5 +15,11 @@ export function calculator() {
 
 	const subtract = (n1, n2) => n1 - n2;
 
-	return { add, subtract };
+	const divide = (n1, n2) => {
+		if (n2 == 0) {
+			return "Mathematical Error division by zero";
+		}
+		return n1 / n2;
+	};
+	return { add, subtract, divide };
 }
