@@ -75,3 +75,17 @@ test("divide by zero", () => {
 test("dividing zero", () => {
 	expect(calculator().divide(0, 2)).toBe(0);
 });
+
+// test multiply function
+
+test("multiply (1)", () => {
+	expect(calculator().multiply(8, 8)).toBe(64);
+});
+
+test("mulitply by zero", () => {
+	expect(calculator().multiply(0, 5)).toBe(0);
+});
+
+test("multiply decimals", () => {
+	expect(calculator().multiply(0.1, 0.5)).toBeCloseTo(0.05);
+});
