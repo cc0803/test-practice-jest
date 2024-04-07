@@ -41,3 +41,17 @@ test("Calculator object add decimal Numbers", () => {
 test("Calculator object add negativ numbers", () => {
 	expect(calculator().add(-2, -7)).toBe(-9);
 });
+
+// subtract function
+
+test("subtract 1", () => {
+	expect(calculator().subtract(21, 4)).toBe(17);
+});
+
+test("subtract decimals", () => {
+	expect(calculator().subtract(0.7, 0.3)).toBeCloseTo(0.4);
+});
+
+test("subtract negativ numbers", () => {
+	expect(calculator().subtract(3, -2)).toBe(5);
+});

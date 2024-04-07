@@ -13,5 +13,7 @@ export function reverse(word) {
 export function calculator() {
 	const add = (n1, n2) => n1 + n2;
 
-	return { add };
+	const subtract = (n1, n2) => n1 - n2;
+
+	return { add, subtract };
 }
