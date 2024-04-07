@@ -1,4 +1,4 @@
-import { calculator, capitalize, reverse } from "./index.js";
+import { calculator, capitalize, reverse, ceasarsCypher } from "./index.js";
 
 test("Capitalize first letter in string 1", () => {
 	expect(capitalize("my")).toBe("My");
@@ -88,4 +88,40 @@ test("mulitply by zero", () => {
 
 test("multiply decimals", () => {
 	expect(calculator().multiply(0.1, 0.5)).toBeCloseTo(0.05);
+});
+
+// test ceasars cypher
+
+test("Ceasars Cypher one character (1)", () => {
+	expect(ceasarsCypher("a", 1)).toBe("b");
+});
+
+test("Ceasars Cypher one character (2)", () => {
+	expect(ceasarsCypher("b", 2)).toBe("d");
+});
+
+test("Ceasars Cypher one word", () => {
+	expect(ceasarsCypher("Pinetree", 1)).toBe("Qjofusff");
+});
+
+test("Ceasars Cypher z-a wrap", () => {
+	expect(ceasarsCypher("z", 1)).toBe("a");
+});
+
+test("Ceasars Cypher word z-a wrap", () => {
+	expect(ceasarsCypher("xyz", 3)).toBe("abc");
+});
+
+test("Ceasars Cypher Case sensitive z-a wrap", () => {
+	expect(ceasarsCypher("Zumba", 1)).toBe("Avncb");
+});
+
+test("Ceasars Cypher factor > 26", () => {
+	expect(ceasarsCypher("Zumbz", 27)).toBe("Avnca");
+});
+
+test("Ceasars Cypher full sentence", () => {
+	expect(ceasarsCypher("The big pink elephant", 27)).toBe(
+		"Uif cjh qjol fmfqibou"
+	);
 });

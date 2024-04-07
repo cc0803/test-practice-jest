@@ -26,3 +26,34 @@ export function calculator() {
 
 	return { add, subtract, divide, multiply };
 }
+
+export function ceasarsCypher(text, factor) {
+	text = text.split("");
+	let newCharCode;
+	factor = factor % 26;
+
+	text = convertToASCII(text);
+
+	for (let i = 0; i < text.length; i++) {
+		newCharCode = text[i] + factor;
+
+		if (
+			(text[i] < 123 && newCharCode > 122) ||
+			(text[i] < 91 && newCharCode > 90)
+		) {
+			text[i] = String.fromCharCode(newCharCode - 26);
+		} else if (
+			!(text[i] >= 65 && text[i] <= 90) &&
+			!(text[i] >= 97 && text[i] <= 122)
+		) {
+			text[i] = String.fromCharCode(text[i]);
+		} else {
+			text[i] = String.fromCharCode(newCharCode);
+		}
+	}
+	return text.join("");
+}
+
+function convertToASCII(text) {
+	return text.map((letter) => letter.charCodeAt(0));
+}
