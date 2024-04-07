@@ -9,3 +9,9 @@ export function capitalize(sentence) {
 export function reverse(word) {
 	return word.split("").reverse().join("");
 }
+
+export function calculator() {
+	const add = (n1, n2) => n1 + n2;
+
+	return { add };
+}
