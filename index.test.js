@@ -1,4 +1,10 @@
-import { calculator, capitalize, reverse, ceasarsCypher } from "./index.js";
+import {
+	calculator,
+	capitalize,
+	reverse,
+	ceasarsCypher,
+	analyseArray,
+} from "./index.js";
 
 test("Capitalize first letter in string 1", () => {
 	expect(capitalize("my")).toBe("My");
@@ -124,4 +130,38 @@ test("Ceasars Cypher full sentence", () => {
 	expect(ceasarsCypher("The big pink elephant", 27)).toBe(
 		"Uif cjh qjol fmfqibou"
 	);
+});
+
+// test analyse array function
+
+test("Test for length", () => {
+	expect(analyseArray([6, 3, 8]).length).toBe(3);
+});
+
+test("Test for max number", () => {
+	expect(analyseArray([6, 3, 8]).max).toBe(8);
+});
+
+test("Test for max only negatives", () => {
+	expect(analyseArray([-1, -2]).max).toBe(-1);
+});
+
+test("Test for max with empty Array", () => {
+	expect(analyseArray([]).max).toBe(null);
+});
+
+test("Test for min value", () => {
+	expect(analyseArray([-1, 2, 5]).min).toBe(-1);
+});
+
+test("Test for min value empty Array", () => {
+	expect(analyseArray([]).min).toBe(null);
+});
+
+test("Test for average", () => {
+	expect(analyseArray([1, 2, 3]).avg).toBe(2);
+});
+
+test("Test for average empty Array", () => {
+	expect(analyseArray([]).avg).toBe(null);
 });

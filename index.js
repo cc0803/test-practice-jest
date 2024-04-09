@@ -57,3 +57,13 @@ export function ceasarsCypher(text, factor) {
 function convertToASCII(text) {
 	return text.map((letter) => letter.charCodeAt(0));
 }
+
+export function analyseArray(arr) {
+	let length = arr.length;
+	let max = length ? Math.max(...arr) : null;
+	let min = length ? Math.min(...arr) : null;
+	let avg = length
+		? arr.reduce((total = 0, current) => total + current, 0) / length
+		: null;
+	return { length, max, min, avg };
+}
